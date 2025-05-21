@@ -1,24 +1,3 @@
 {
-  "orders": [
-    {
-      "order_id": "o1",
-      "user": "user1",
-      "pair": "PEK/SWAP.HIVE",
-      "side": "buy",
-      "price": 0.049,
-      "amount": 200,
-      "status": "open",
-      "timestamp": "2025-05-19T22:00:00Z"
-    },
-    {
-      "order_id": "o2",
-      "user": "peakecoin",
-      "pair": "PEK/SWAP.HIVE",
-      "side": "sell",
-      "price": 0.051,
-      "amount": 150,
-      "status": "open",
-      "timestamp": "2025-05-19T22:05:00Z"
-    }
-  ]
+  "orders": []
 }
