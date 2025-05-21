@@ -1,0 +1,1 @@
+{"trades":[{"trade_id":"t1","timestamp":"2025-05-19T15:00:00Z","pair":"PEK/SWAP.HIVE","buyer":"user1","seller":"peakecoin","amount":100,"price":0.05,"side":"buy"},{"trade_id":"t2","timestamp":"2025-05-19T16:00:00Z","pair":"PEK/SWAP.BTC","buyer":"peakecoin","seller":"user1","amount":10,"price":0.00001,"side":"sell"}]}

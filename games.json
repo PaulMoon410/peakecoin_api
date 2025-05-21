@@ -1,0 +1,75 @@
+{
+  "games": [
+    {
+      "game_id": "g1",
+      "name": "Peake Poker",
+      "active_players": 12,
+      "status": "active",
+      "pek_enabled": true,
+      "pek_usage": {
+        "entry_fee": 10,
+        "reward_pool": 1000,
+        "last_winner": "user1",
+        "last_win_amount": 200,
+        "currency": "PEK"
+      },
+      "api_endpoints": {
+        "events": "game_events.json",
+        "leaderboard": "poker_leaderboard.json",
+        "history": "poker_history.json"
+      }
+    },
+    {
+      "game_id": "g2",
+      "name": "Peake MUD",
+      "active_players": 5,
+      "status": "maintenance",
+      "pek_enabled": true,
+      "pek_usage": {
+        "entry_fee": 0,
+        "reward_pool": 500,
+        "last_winner": "peakecoin",
+        "last_win_amount": 50,
+        "currency": "PEK"
+      },
+      "api_endpoints": {
+        "events": "game_events.json",
+        "leaderboard": "leaderboard.json",
+        "history": "mud_state.json"
+      }
+    },
+    {
+      "game_id": "g3",
+      "name": "The Peake",
+      "active_players": 0,
+      "status": "development",
+      "pek_enabled": true,
+      "pek_usage": {
+        "entry_fee": 0,
+        "reward_pool": 0,
+        "last_winner": null,
+        "last_win_amount": 0,
+        "currency": "PEK"
+      },
+      "api_endpoints": {
+        "events": "game_events.json",
+        "leaderboard": "leaderboard.json",
+        "history": "mud_state.json"
+      }
+    }
+  ],
+  "pek_interface": {
+    "description": "Universal interface for in-game PEK usage. Any game can use this for deposits, withdrawals, and balance checks.",
+    "endpoints": {
+      "get_balance": "wallet_balances.json",
+      "deposit": "pending_withdrawals.json",
+      "withdraw": "pending_withdrawals.json",
+      "transfer": "trade_history.json"
+    },
+    "usage": [
+      "To check a user's PEK balance, read from wallet_balances.json.",
+      "To deposit or withdraw PEK, append a request to pending_withdrawals.json.",
+      "To transfer PEK between users or for in-game actions, log the transaction in trade_history.json and update wallet_balances.json."
+    ]
+  }
+}

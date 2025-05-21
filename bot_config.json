@@ -1,0 +1,82 @@
+{
+  "config": {
+    "swapbot1": {
+      "from_token": "PEK",
+      "to_token": "SWAP.HIVE",
+      "rate": 0.05,
+      "max_swap": 1000
+    },
+    "trading_bots": [
+      {
+        "bot_id": "marketmaker1",
+        "enabled": true,
+        "pair": "PEK/SWAP.HIVE",
+        "strategy": "market_maker",
+        "order_size": 50,
+        "spread": 0.01,
+        "max_orders": 5,
+        "min_balance": 100,
+        "risk_limit": 0.2,
+        "place_order": {
+          "type": "limit",
+          "side": "both",
+          "price_offset": 0.005
+        },
+        "api": {
+          "get_balance": {
+            "url": "https://api.hive-engine.com/rpc/contracts",
+            "method": "POST",
+            "payload_template": {
+              "jsonrpc": "2.0",
+              "method": "find",
+              "params": {
+                "contract": "tokens",
+                "table": "balances",
+                "query": {"account": "{account}", "symbol": "{token}"}
+              },
+              "id": 1
+            }
+          },
+          "get_open_orders": {
+            "url": "https://api.hive-engine.com/rpc/contracts",
+            "method": "POST",
+            "payload_template": {
+              "jsonrpc": "2.0",
+              "method": "find",
+              "params": {
+                "contract": "market",
+                "table": "openOrders",
+                "query": {"account": "{account}", "symbol": "{token}"}
+              },
+              "id": 1
+            }
+          },
+          "place_order": {
+            "contract": "market",
+            "action": "{order_type}",
+            "payload_template": {
+              "symbol": "{token}",
+              "quantity": "{quantity}",
+              "price": "{price}"
+            }
+          }
+        }
+      },
+      {
+        "bot_id": "trendfollower1",
+        "enabled": false,
+        "pair": "PEK/SWAP.BTC",
+        "strategy": "trend_follower",
+        "order_size": 10,
+        "max_orders": 2,
+        "min_balance": 20,
+        "risk_limit": 0.1,
+        "place_order": {
+          "type": "market",
+          "side": "buy",
+          "price_offset": 0
+        }
+      }
+    ]
+  }
+}

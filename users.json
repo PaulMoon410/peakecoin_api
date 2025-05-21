@@ -1,0 +1,1 @@
+{"users":[{"username":"peakecoin","display_name":"PeakeCoin Admin","created":"2024-01-01T00:00:00Z","roles":["admin","liquidity"],"settings":{"email":"admin@peakecoin.com","notifications":true}},{"username":"user1","display_name":"Alice","created":"2024-05-01T12:00:00Z","roles":["user"],"settings":{"email":"alice@example.com","notifications":false}}]}

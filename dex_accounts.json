@@ -1,0 +1,4 @@
+{"accounts": [
+    {"username": "peakecoin.matic", "role": "liquidity", "currencies": ["SWAP.MATIC", "PEK"], "public_key": "PEAKEMATICPUBKEY123", "address": "0x1234567890abcdef"},
+    {"username": "peakecoin.bnb", "role": "liquidity", "currencies": ["SWAP.BNB", "PEK"], "public_key": "PEAKEBNBPUBKEY456", "address": "bnb1abcdef1234567890"}
+]}
