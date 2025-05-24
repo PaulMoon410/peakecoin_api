@@ -1,0 +1,4 @@
+{
+  "markets": {},
+  "note": "This file is intentionally left empty for market pairs and values. All market data is fetched live from the Hive Engine API via fetch_market.js. This file exists only as a fallback structure for robustness and compatibility. Do not add static pairs or values here."
+}

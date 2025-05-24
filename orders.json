@@ -1,3 +1,24 @@
 {
-  "orders": []
+  "orders": [
+    {
+      "order_id": "b1",
+      "user": "userA",
+      "pair": "PEK/SWAP.MATIC",
+      "side": "buy",
+      "price": 0.049,
+      "amount": 200,
+      "status": "open",
+      "timestamp": "2025-05-21T00:00:00Z"
+    },
+    {
+      "order_id": "a1",
+      "user": "userB",
+      "pair": "PEK/SWAP.MATIC",
+      "side": "sell",
+      "price": 0.051,
+      "amount": 150,
+      "status": "open",
+      "timestamp": "2025-05-21T00:01:00Z"
+    }
+  ]
 }

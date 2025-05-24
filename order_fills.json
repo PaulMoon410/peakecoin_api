@@ -1,1 +1,1 @@
-{"fills":[{"fill_id":"f1","order_id":"o1","user":"user1","amount":100,"price":0.05,"timestamp":"2025-05-19T23:00:00Z"}]}
+{"fills":[],"note":"This file is intentionally left empty for fills. All order fill data is fetched live from the Hive Engine API via order_fills.js. This file exists only as a fallback structure for robustness and compatibility. Do not add static fills here."}

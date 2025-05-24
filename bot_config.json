@@ -95,6 +95,44 @@
           "side": "both",
           "price_offset": 0.005
         }
+      },
+      {
+        "bot_id": "maticmaker1",
+        "enabled": true,
+        "pair": "SWAP.MATIC/PEK",
+        "strategy": "market_maker",
+        "order_size": 25,
+        "spread": 0.02,
+        "max_orders": 3,
+        "min_balance": 50,
+        "risk_limit": 0.15,
+        "tick": 0.00000001,
+        "delay": 300,
+        "account": "peakecoin.matic",
+        "place_order": {
+          "type": "limit",
+          "side": "both",
+          "price_offset": 0.005
+        }
+      },
+      {
+        "bot_id": "maticmaker1",
+        "enabled": true,
+        "pair": "SWAP.MATIC",
+        "strategy": "market_maker",
+        "order_size": 25,
+        "spread": 0.02,
+        "max_orders": 3,
+        "min_balance": 50,
+        "risk_limit": 0.15,
+        "tick": 0.00000001,
+        "delay": 300,
+        "account": "peakecoin.matic",
+        "place_order": {
+          "type": "limit",
+          "side": "both",
+          "price_offset": 0.005
+        }
       }
     ]
   }

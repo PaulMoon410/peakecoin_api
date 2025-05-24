@@ -7,4 +7,5 @@
     {"base": "PEK", "quote": "SWAP.MATIC"},
     {"base": "PEK", "quote": "SWAP.HBD"},
     {"base": "PEK", "quote": "PIMP"}
-]}
+  ]
+}
