@@ -1,5 +1,7 @@
-// JS helper for swapbot_status.json
-async function fetchSwapbotStatus() {
-    const res = await fetch('swapbot_status.json');
-    return await res.json();
-}
+// Embedded swapbot status data as a JS object
+const swapbotStatus = {
+  swapbots: []
+};
+
+if (typeof module !== 'undefined') module.exports = swapbotStatus;
+if (typeof window !== 'undefined') window.swapbotStatus = swapbotStatus;

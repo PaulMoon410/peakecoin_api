@@ -1,5 +1,7 @@
-// JS helper for ftp_config.json
-async function fetchFtpConfig() {
-    const res = await fetch('ftp_config.json');
-    return await res.json();
-}
+// Embedded FTP config data as a JS object
+const ftpConfig = {
+  config: {}
+};
+
+if (typeof module !== 'undefined') module.exports = ftpConfig;
+if (typeof window !== 'undefined') window.ftpConfig = ftpConfig;

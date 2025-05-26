@@ -1,5 +1,7 @@
-// JS helper for bot_config.json
-async function fetchBotConfig() {
-    const res = await fetch('bot_config.json');
-    return await res.json();
-}
+// Embedded bot config data as a JS object
+const botConfig = {
+  config: {}
+};
+
+if (typeof module !== 'undefined') module.exports = botConfig;
+if (typeof window !== 'undefined') window.botConfig = botConfig;

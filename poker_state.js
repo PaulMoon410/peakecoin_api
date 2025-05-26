@@ -1,5 +1,7 @@
-// JS helper for poker_state.json
-async function fetchPokerState() {
-    const res = await fetch('poker_state.json');
-    return await res.json();
-}
+// Embedded poker state data as a JS object
+const pokerState = {
+  state: {}
+};
+
+if (typeof module !== 'undefined') module.exports = pokerState;
+if (typeof window !== 'undefined') window.pokerState = pokerState;

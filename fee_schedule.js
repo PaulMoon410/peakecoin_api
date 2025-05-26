@@ -1,5 +1,7 @@
-// JS helper for fee_schedule.json
-async function fetchFeeSchedule() {
-    const res = await fetch('fee_schedule.json');
-    return await res.json();
-}
+// Embedded fee schedule data as a JS object
+const feeSchedule = {
+  fees: {}
+};
+
+if (typeof module !== 'undefined') module.exports = feeSchedule;
+if (typeof window !== 'undefined') window.feeSchedule = feeSchedule;

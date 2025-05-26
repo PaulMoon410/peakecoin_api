@@ -1,5 +1,7 @@
-// JS helper for bot_logs.json
-async function fetchBotLogs() {
-    const res = await fetch('bot_logs.json');
-    return await res.json();
-}
+// Embedded bot logs data as a JS object
+const botLogs = {
+  logs: []
+};
+
+if (typeof module !== 'undefined') module.exports = botLogs;
+if (typeof window !== 'undefined') window.botLogs = botLogs;

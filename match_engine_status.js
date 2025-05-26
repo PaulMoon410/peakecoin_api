@@ -1,5 +1,8 @@
-// JS helper for match_engine_status.json
-async function fetchMatchEngineStatus() {
-    const res = await fetch('match_engine_status.json');
-    return await res.json();
-}
+// Embedded match engine status data as a JS object
+const matchEngineStatus = {
+  status: "ok",
+  last_run: null
+};
+
+if (typeof module !== 'undefined') module.exports = matchEngineStatus;
+if (typeof window !== 'undefined') window.matchEngineStatus = matchEngineStatus;

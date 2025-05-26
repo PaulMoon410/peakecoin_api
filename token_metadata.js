@@ -1,5 +1,7 @@
-// JS helper for token_metadata.json
-async function fetchTokenMetadata() {
-    const res = await fetch('token_metadata.json');
-    return await res.json();
-}
+// Embedded token metadata as a JS object
+const tokenMetadata = {
+  tokens: []
+};
+
+if (typeof module !== 'undefined') module.exports = tokenMetadata;
+if (typeof window !== 'undefined') window.tokenMetadata = tokenMetadata;

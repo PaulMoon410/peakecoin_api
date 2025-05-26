@@ -1,5 +1,7 @@
-// JS helper for status.json
-async function fetchStatus() {
-    const res = await fetch('status.json');
-    return await res.json();
-}
+// Embedded status data as a JS object
+const status = {
+  status: "ok"
+};
+
+if (typeof module !== 'undefined') module.exports = status;
+if (typeof window !== 'undefined') window.status = status;

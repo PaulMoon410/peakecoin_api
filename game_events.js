@@ -1,5 +1,7 @@
-// JS helper for game_events.json
-async function fetchGameEvents() {
-    const res = await fetch('game_events.json');
-    return await res.json();
-}
+// Embedded game events data as a JS object
+const gameEvents = {
+  events: []
+};
+
+if (typeof module !== 'undefined') module.exports = gameEvents;
+if (typeof window !== 'undefined') window.gameEvents = gameEvents;

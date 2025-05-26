@@ -1,5 +1,7 @@
-// JS helper for mud_state.json
-async function fetchMudState() {
-    const res = await fetch('mud_state.json');
-    return await res.json();
-}
+// Embedded mud state data as a JS object
+const mudState = {
+  state: {}
+};
+
+if (typeof module !== 'undefined') module.exports = mudState;
+if (typeof window !== 'undefined') window.mudState = mudState;

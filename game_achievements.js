@@ -1,5 +1,7 @@
 // JS helper for game_achievements.json
-async function fetchGameAchievements() {
-    const res = await fetch('game_achievements.json');
-    return await res.json();
-}
+const gameAchievements = {
+    achievements: []
+};
+
+if (typeof module !== 'undefined') module.exports = gameAchievements;
+if (typeof window !== 'undefined') window.gameAchievements = gameAchievements;

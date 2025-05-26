@@ -1,5 +1,7 @@
-// JS helper for login_status.json
-async function fetchLoginStatus() {
-    const res = await fetch('login_status.json');
-    return await res.json();
-}
+// Embedded login status data as a JS object
+const loginStatus = {
+  status: "logged_out"
+};
+
+if (typeof module !== 'undefined') module.exports = loginStatus;
+if (typeof window !== 'undefined') window.loginStatus = loginStatus;

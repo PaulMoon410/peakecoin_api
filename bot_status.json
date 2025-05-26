@@ -1,1 +1,1 @@
-{"bots":[{"bot_id":"swapbot1","type":"swapbot","status":"active","last_seen":"2025-05-20T00:00:00Z"}]}
+{"note":"This file is now replaced by bot_status.js for direct JS embedding. See bot_status.js for the data structure."}

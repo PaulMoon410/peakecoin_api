@@ -1,5 +1,7 @@
-// JS helper for changelog.json
-async function fetchChangelog() {
-    const res = await fetch('changelog.json');
-    return await res.json();
-}
+// Embedded changelog data as a JS object
+const changelog = {
+  changes: []
+};
+
+if (typeof module !== 'undefined') module.exports = changelog;
+if (typeof window !== 'undefined') window.changelog = changelog;
