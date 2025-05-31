@@ -1,24 +1,75 @@
 // peakecoin_api/hive_wallet.js
-// Stub module for future Hive Keychain wallet integration
+// Hive Keychain wallet integration for PeakeCoin (classic script version)
 
-export function isWalletAvailable() {
-    // In production, check for Hive Keychain or wallet API
-    return false; // Always false for guest/demo mode
+let _walletUser = null;
+
+function isWalletAvailable() {
+    return typeof window !== 'undefined' && !!window.hive_keychain;
 }
 
-export function connectWallet() {
-    // In production, trigger wallet connect flow
-    throw new Error('Wallet integration not enabled.');
+function connectWallet() {
+    return new Promise((resolve, reject) => {
+        if (!isWalletAvailable()) {
+            reject(new Error('Hive Keychain extension is required! Please install it from https://hive-keychain.com and refresh this page.'));
+            return;
+        }
+        // Prompt for Hive username
+        const username = prompt('Enter your Hive username (the same as in your Hive Keychain extension):');
+        if (!username) {
+            reject(new Error('Username is required.'));
+            return;
+        }
+        // Request a signature from Hive Keychain to prove ownership
+        window.hive_keychain.requestSignBuffer(
+            username,
+            'Sign in to PeakeCoin',
+            'Posting',
+            function(response) {
+                if (response.success) {
+                    _walletUser = username;
+                    resolve(username);
+                } else {
+                    reject(new Error('Hive Keychain sign-in failed or was rejected.'));
+                }
+            }
+        );
+    });
 }
 
-export function getWalletAddress() {
-    // In production, return the connected wallet address
-    return null;
+function getWalletAddress() {
+    return _walletUser;
 }
 
-export function getWalletBalance(username) {
-    // In production, fetch PEK balance for the given Hive username
-    return Promise.resolve(0); // Always 0 in demo mode
+function getWalletBalance(username) {
+    // Fetch PEK balance for the given Hive username from Hive Engine
+    return fetch('https://api.hive-engine.com/rpc/contracts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            jsonrpc: '2.0',
+            id: 1,
+            method: 'find',
+            params: {
+                contract: 'tokens',
+                table: 'balances',
+                query: { account: username.toLowerCase(), symbol: 'PEK' }
+            }
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data && data.result && data.result.length > 0) {
+            return Number(data.result[0].balance);
+        }
+        return 0;
+    })
+    .catch(() => 0);
 }
 
-// Add more wallet-related functions here as needed for future integration.
+// Attach to window for global access
+window.isWalletAvailable = isWalletAvailable;
+window.connectWallet = connectWallet;
+window.getWalletAddress = getWalletAddress;
+window.getWalletBalance = getWalletBalance;
+
+console.log('[DEBUG] hive_wallet.js loaded, connectWallet on window:', typeof window.connectWallet);

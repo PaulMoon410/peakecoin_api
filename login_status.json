@@ -1,3 +1,6 @@
 {
-  "status": "guest"
+  "logged_in": true,
+  "username": "demo_user",
+  "login_time": "2025-05-25T11:59:00Z",
+  "session_id": "mock-session-12345"
 }

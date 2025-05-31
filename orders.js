@@ -70,3 +70,6 @@ async function fetchOrders(opts = {}) {
 
 if (typeof window !== 'undefined') window.fetchOrders = fetchOrders;
 if (typeof module !== 'undefined') module.exports = { fetchOrders, fetchLiveOrders, fetchStaticOrders };
+
+// Simulated orders
+module.exports = require('./orders.json');

@@ -1,7 +1,7 @@
 {
   "orders": [
     {
-      "order_id": "b1",
+      "order_id": 101,
       "user": "userA",
       "pair": "PEK/SWAP.MATIC",
       "side": "buy",
@@ -11,7 +11,7 @@
       "timestamp": "2025-05-21T00:00:00Z"
     },
     {
-      "order_id": "a1",
+      "order_id": 102,
       "user": "userB",
       "pair": "PEK/SWAP.MATIC",
       "side": "sell",
@@ -19,6 +19,23 @@
       "amount": 150,
       "status": "open",
       "timestamp": "2025-05-21T00:01:00Z"
+    },
+    {
+      "order_id": 101,
+      "type": "buy",
+      "amount": "50.000 HIVE",
+      "price": "0.300 HBD",
+      "status": "open",
+      "created": "2025-05-24T14:00:00Z"
+    },
+    {
+      "order_id": 102,
+      "type": "sell",
+      "amount": "20.000 HIVE",
+      "price": "0.320 HBD",
+      "status": "filled",
+      "created": "2025-05-23T09:00:00Z",
+      "filled": "2025-05-23T10:00:00Z"
     }
   ]
 }

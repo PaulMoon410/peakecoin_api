@@ -1,1 +1,1 @@
-{"logs":[{"timestamp":"2025-05-19T10:00:00Z","action":"user1 logged in","ip":"192.168.1.10"},{"timestamp":"2025-05-19T10:05:00Z","action":"user1 placed order","order_id":"o1"}]}
+{"logs":[{"timestamp":"2025-05-19T10:00:00Z","action":"user1 logged in","ip":"192.168.1.10"},{"timestamp":"2025-05-19T10:05:00Z","action":"user1 placed order","order_id":"o1"},{"event":"login_attempt","username":"demo_user","success":true,"timestamp":"2025-05-25T11:59:00Z"},{"event":"transfer","from":"demo_user","to":"alice","amount":"10.000 HIVE","timestamp":"2025-05-24T15:00:00Z"}]}
