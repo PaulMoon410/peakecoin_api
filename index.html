@@ -8,106 +8,32 @@
 <head>
   <meta charset="UTF-8">
   <title>PeakeCoin API Projects</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Montserrat', Arial, sans-serif;
-      background: linear-gradient(135deg, #232526 0%, #414345 100%);
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      color: #f5f5f5;
-    }
-    .container {
-      max-width: 700px;
-      margin: 3em auto;
-      background: rgba(30, 30, 40, 0.98);
-      border-radius: 18px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      padding: 2.5em 2.5em 2em 2.5em;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-    h1 {
-      font-size: 2.3em;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 0.2em;
-      color: #ffd700;
-      text-shadow: 0 2px 8px #0008;
-    }
-    h2 {
-      font-size: 1.3em;
-      color: #ffb300;
-      margin-top: 2em;
-      margin-bottom: 0.5em;
-      letter-spacing: 0.5px;
-    }
-    ul {
-      background: rgba(255,255,255,0.04);
-      padding: 1.2em 2em;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px #0002;
-      margin-bottom: 1.5em;
-    }
-    li {
-      margin: 0.7em 0;
-      font-size: 1.08em;
-      line-height: 1.5;
-    }
-    a {
-      color: #00e6ff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.2s;
-    }
-    a:hover {
-      color: #ffd700;
-      text-shadow: 0 0 8px #ffd70088;
-    }
-    .desc {
-      color: #aaa;
-      font-size: 0.95em;
-      font-weight: 400;
-      margin-left: 0.5em;
-    }
-    .update-date {
-      color: #ffd700;
-      font-weight: 600;
-      font-size: 1em;
-      margin-right: 0.5em;
-    }
-    .logo {
-      display: block;
-      margin: 0 auto 1.5em auto;
-      width: 90px;
-      filter: drop-shadow(0 2px 8px #0008);
-    }
-    @media (max-width: 800px) {
-      .container { max-width: 98vw; padding: 1em; }
-      ul { padding: 1em; }
-    }
+    body { font-family: Arial, sans-serif; background: #f8f8f8; margin: 0; padding: 2em; }
+    h1 { color: #333; }
+    ul { background: #fff; padding: 1em 2em; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
+    li { margin: 0.5em 0; }
+    a { color: #1976d2; text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img class="logo" src="https://raw.githubusercontent.com/PaulMoon410/peakecoisino/main/assets/peakecoin-logo.png" alt="PeakeCoin Logo" onerror="this.style.display='none'">
-    <h1>PeakeCoin API Projects</h1>
-    <ul>
-      <li><a href="directory.html">Alphabetical JS/JSON Directory</a><span class="desc">All API files, jump by letter</span></li>
-      <li><a href="https://paulmoon410.github.io/peakecoisino/">Play Peakecoisino Games</a><span class="desc">GitHub Pages (public)</span></li>
-      <li><a href="games.js">Games List API</a><span class="desc">All available games</span></li>
-      <li><a href="dex_accounts.js">DEX Accounts API</a><span class="desc">Decentralized Exchange</span></li>
-      <li><a href="atompek_swap.html">Atompek Swap (UI)</a><span class="desc">Token swap interface</span></li>
-      <li><a href="changelog.js">Changelog API</a><span class="desc">Recent changes (JS)</span></li>
-      <li><a href="changelog.json">Changelog (JSON)</a><span class="desc">Recent changes (JSON)</span></li>
-    </ul>
-    <h2>Recent Updates</h2>
-    <ul>
-      <li><span class="update-date">2025-06-05:</span> <strong>directory.html</strong> — Alphabetical directory of all .js/.json files added for easy access.</li>
-      <li><span class="update-date">2025-06-05:</span> <strong>index.html</strong> — Cleaned up, now links to directory, games, DEX, Atompek Swap, and changelog.</li>
-      <li><span class="update-date">2025-06-05:</span> <strong>Games</strong> — All game links consolidated to GitHub Pages for public play.</li>
-      <li><span class="update-date">2025-06-05:</span> <strong>Static API files</strong> — Many .js/.json files updated for lightweight, universal access.</li>
-    </ul>
-  </div>
+  <h1>PeakeCoin API Projects</h1>
+  <ul>
+    <li><a href="directory.html">Alphabetical JS/JSON Directory</a> <span style="color:#888;font-size:0.9em;">(All files, all folders)</span></li>
+    <li><a href="https://paulmoon410.github.io/peakecoisino/">Play Peakecoisino Games on GitHub Pages</a></li>
+    <li><a href="games.js">Games List API</a></li>
+    <li><a href="dex_accounts.js">DEX Accounts API</a></li>
+    <li><a href="atompek_swap.html">Atompek Swap (UI)</a></li>
+    <li><a href="changelog.js">Changelog API</a></li>
+    <li><a href="changelog.json">Changelog (JSON)</a></li>
+  </ul>
+  <h2>Recent Updates</h2>
+  <ul>
+    <li>2025-06-05: <strong>directory.html</strong> — Alphabetical directory of all .js/.json files added for easy access.</li>
+    <li>2025-06-05: <strong>index.html</strong> — Cleaned up, now links to directory, games, DEX, Atompek Swap, and changelog.</li>
+    <li>2025-06-05: <strong>Games</strong> — All game links consolidated to GitHub Pages for public play.</li>
+    <li>2025-06-05: <strong>Static API files</strong> — Many .js/.json files updated for lightweight, universal access.</li>
+  </ul>
 </body>
 </html>
