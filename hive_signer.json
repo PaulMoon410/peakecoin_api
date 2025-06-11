@@ -1,0 +1,21 @@
+{
+  "description": "Helpers for generating HiveSigner.com URLs for login/auth and transaction signing.",
+  "methods": [
+    {
+      "name": "getLoginUrl",
+      "params": ["app", "callbackUrl", "state"],
+      "description": "Generate a HiveSigner OAuth2 login URL for your app."
+    },
+    {
+      "name": "getCustomJsonUrl",
+      "params": ["account", "id", "json", "authority", "redirectUri"],
+      "description": "Generate a HiveSigner URL for signing and broadcasting a custom_json operation."
+    },
+    {
+      "name": "getTransferUrl",
+      "params": ["from", "to", "amount", "memo", "currency", "redirectUri"],
+      "description": "Generate a HiveSigner URL for signing and broadcasting a transfer operation."
+    }
+  ],
+  "usage": "hiveSigner.getLoginUrl('app', 'https://your.site/callback')\nhiveSigner.getCustomJsonUrl('user', 'custom_id', {...})\nhiveSigner.getTransferUrl('from', 'to', '1.000', 'memo', 'HIVE')"
+}
