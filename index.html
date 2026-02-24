@@ -108,52 +108,6 @@
       <li><span class="update-date">2025-06-05:</span> <strong>Games</strong> — All game links consolidated to GitHub Pages for public play.</li>
       <li><span class="update-date">2025-06-05:</span> <strong>Static API files</strong> — Many .js/.json files updated for lightweight, universal access.</li>
     </ul>
-    <section id="api-directory">
-      <h2>PeakeCoin API JS & JSON Directory</h2>
-      <p>Browse and use all PeakeCoin API modules below. Click to view or copy CDN links. For usage, see examples below each entry.</p>
-      <ul>
-        <li><b>announcements</b><br>
-          <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/announcements.js">JS Module</a> |
-          <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/announcements.json">JSON</a><br>
-          <i>Site-wide announcements and news.</i><br>
-          <code>announcements.announcements</code>
-        </li>
-        <li><b>audit_log</b><br>
-          <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/audit_log.js">JS Module</a> |
-          <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/audit_log.json">JSON</a><br>
-          <i>Audit log entries for admin or compliance review.</i><br>
-          <code>auditLog.logs</code>
-        </li>
-        <li><b>blockLog</b><br>
-          <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/blockLog.js">JS Module</a> |
-          <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/blockLog.json">JSON</a><br>
-          <i>Static/fallback log of blockchain blocks processed by the PeakeCoin system.</i><br>
-          <code>blockLog.blocks</code>
-        </li>
-        <li><b>keychain</b><br>
-          <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/keychain.js">JS Module</a> |
-          <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/keychain.json">JSON</a><br>
-          <i>Helpers for Hive Keychain signature requests.</i><br>
-          <code>keychainHelpers.requestSignBuffer(...)</code>
-        </li>
-        <li><b>hive_signer</b><br>
-          <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_signer.js">JS Module</a> |
-          <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_signer.json">JSON</a><br>
-          <i>Helpers for generating HiveSigner.com URLs for login/auth and transaction signing.</i><br>
-          <code>hiveSigner.getLoginUrl(...)</code>
-        </li>
-        <!-- Add more modules as needed, following this format -->
-      </ul>
-      <h3>How to Use</h3>
-      <p>For browser/JS: <br>
-        <code>&lt;script src="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/api_listing.js"&gt;&lt;/script&gt;</code><br>
-        <code>console.log(window.apiModules);</code>
-      </p>
-      <p>For Python or other languages: <br>
-        <code>import requests<br>modules = requests.get('https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/api_listing.json').json()</code>
-      </p>
-      <p>All modules are public and can be used for read-only access from any static site or backend.</p>
-    </section>
   </div>
 </body>
 </html>
