@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "type": "transfer",
+    "from": "demo_user",
+    "to": "alice",
+    "amount": "10.000 HIVE",
+    "memo": "Test transfer",
+    "timestamp": "2025-05-24T15:00:00Z"
+  },
+  {
+    "id": 2,
+    "type": "reward",
+    "from": "hive.reward",
+    "to": "demo_user",
+    "amount": "0.500 HIVE",
+    "memo": "Curation reward",
+    "timestamp": "2025-05-23T10:00:00Z"
+  }
+]

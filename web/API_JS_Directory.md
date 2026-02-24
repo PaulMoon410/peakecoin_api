@@ -1,0 +1,144 @@
+# PeakeCoin API JS Directory
+
+Below is a directory of all PeakeCoin API JS modules, each with a description and example usage. All CDN links use your actual GitHub repo: `PaulMoon410/peakecoin_api`.
+
+- [announcements.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/announcements.js)
+  - *Site-wide announcements and news.*
+  - Example: `announcements.announcements`
+- [audit_log.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/audit_log.js)
+  - *Audit log entries for admin or compliance review.*
+  - Example: `auditLog.logs`
+- [blockLog.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/blockLog.js)
+  - *Static/fallback log of blockchain blocks processed by the PeakeCoin system.*
+  - Example: `blockLog.blocks`
+- [blockLog.json](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/blockLog.json)
+  - *Raw JSON version of the block log data.*
+  - Example: (fetch or import as JSON)
+- [bot_config.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/bot_config.js)
+  - *Configuration for trading and automation bots.*
+  - Example: `botConfig.config`
+- [bot_logs.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/bot_logs.js)
+  - *Logs of bot activity and events.*
+  - Example: `botLogs.logs`
+- [bot_status.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/bot_status.js)
+  - *Status of all running bots (observation/monitoring).* 
+  - Example: `botStatus.bots`
+- [changelog.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/changelog.js)
+  - *Changelog of site or API updates.*
+  - Example: `changelog.changes`
+- [dex_accounts.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/dex_accounts.js)
+  - *DEX (decentralized exchange) account info.*
+  - Example: `dexAccounts.accounts`
+- [fee_schedule.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/fee_schedule.js)
+  - *Trading fee schedule for all pairs.*
+  - Example: `feeSchedule.fees`
+- [fetch_market.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/fetch_market.js)
+  - *Live and fallback market stats for any Hive Engine token pair.*
+  - Example: `fetchMarketStats('PEK/SWAP.HIVE')`
+- [ftp_config.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/ftp_config.js)
+  - *FTP server configuration for file uploads.*
+  - Example: `ftpConfig.config`
+- [games.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/games.js)
+  - *List and metadata for all PeakeCoin games.*
+  - Example: `games.games`
+- [game_achievements.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/game_achievements.js)
+  - *Game achievements and unlockables.*
+  - Example: `gameAchievements.achievements`
+- [game_events.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/game_events.js)
+  - *Game event log (tournaments, maintenance, etc.).*
+  - Example: `gameEvents.events`
+- [game_items.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/game_items.js)
+  - *In-game items and collectibles.*
+  - Example: `gameItems.items`
+- [hive_account.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_account.js)
+  - *Hive account information and details.*
+  - Example: `hiveAccount.info`
+- [hive_transactions.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_transactions.js)
+  - *Transaction history for a Hive account.*
+  - Example: `hiveTransactions.history`
+- [hive_wallet.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_wallet.js)
+  - *Wallet balances and information for Hive accounts.*
+  - Example: `hiveWallet.balances`
+- [leaderboard.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/leaderboard.js)
+  - *Global and friends leaderboard data.*
+  - Example: `leaderboard.leaderboard`
+- [login_status.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/login_status.js)
+  - *Login status for users and bots.*
+  - Example: `loginStatus.status`
+- [market_stats.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/market_stats.js)
+  - *Market statistics for PeakeCoin and other tokens.*
+  - Example: `marketStats.stats`
+- [match_engine_status.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/match_engine_status.js)
+  - *Status of the match engine for games.*
+  - Example: `matchEngineStatus.status`
+- [mud_state.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/mud_state.js)
+  - *Current state of the mud (marketplace) for games.*
+  - Example: `mudState.state`
+- [network_status.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/network_status.js)
+  - *Network status and connectivity information.*
+  - Example: `networkStatus.hive_engine`
+- [order_fills.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/order_fills.js)
+  - *Details of order fills and trade executions.*
+  - Example: `fetchOrderFills({symbol, baseSymbol})`
+- [orderbook.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/orderbook.js)
+  - *Order book data for market pairs.*
+  - Example: `fetchOrderbook({symbol, baseSymbol})`
+- [orders.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/orders.js)
+  - *Open and past orders for users.*
+  - Example: `fetchOrders({account, symbol})`
+- [pairs.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/pairs.js)
+  - *Trading pairs available on the exchange.*
+  - Example: `fetchPairs()`
+- [pending_withdrawals.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/pending_withdrawals.js)
+  - *Pending withdrawal requests and their status.*
+  - Example: `fetchPendingWithdrawals({account, symbol})`
+- [poker_history.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/poker_history.js)
+  - *History of poker hands and results.*
+  - Example: `pokerHistory.history`
+- [poker_leaderboard.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/poker_leaderboard.js)
+  - *Leaderboard for poker players.*
+  - Example: `pokerLeaderboard.leaderboard`
+- [poker_state.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/poker_state.js)
+  - *Current state of the poker game (active hands, players, etc.).*
+  - Example: `pokerState.state`
+- [sessions.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/sessions.js)
+  - *User sessions and their activity status.*
+  - Example: `sessions.sessions`
+- [status.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/status.js)
+  - *Overall system status and health checks.*
+  - Example: `status.status`
+- [support.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/support.js)
+  - *Support ticket system and status.*
+  - Example: `support.contact`, `support.faq`
+- [swap_status.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/swap_status.js)
+  - *Status of token swaps and liquidity pools.*
+  - Example: `fetchSwapStatus({user, from_token, to_token})`
+- [swapbot_status.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/swapbot_status.js)
+  - *Status of the swap bot and its operations.*
+  - Example: `swapbotStatus.swapbots`
+- [tipping_bots.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/tipping_bots.js)
+  - *Configuration and status of tipping bots.*
+  - Example: `tippingBots.tipping_bots`
+- [token_metadata.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/token_metadata.js)
+  - *Metadata for all tokens on the platform.*
+  - Example: `tokenMetadata.tokens`
+- [trade_history.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/trade_history.js)
+  - *Historical trade data for analysis.*
+  - Example: `fetchTradeHistory({symbol, baseSymbol})`
+- [trading_bots.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/trading_bots.js)
+  - *Configuration and status of trading bots.*
+  - Example: `tradingBots.trading_bots`
+- [users.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/users.js)
+  - *User profiles and account details.*
+  - Example: `users.users`
+- [user_settings.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/user_settings.js)
+  - *User-specific settings and preferences.*
+  - Example: `userSettings.settings`
+- [voting_bots.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/voting_bots.js)
+  - *Configuration and status of voting bots.*
+  - Example: `votingBots.voting_bots`
+- [wallet_balances.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/wallet_balances.js)
+  - *Wallet balances for all users.*
+  - Example: `fetchWalletBalances({account, symbol})`
+
+> **Tip:** To use a module, add a `<script src="...jsdelivr..."></script>` tag to your HTML, or import it in your JS project if using a bundler.

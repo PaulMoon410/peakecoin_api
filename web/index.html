@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PeakeCoin API JS Directory</title>
+  <style>
+    body { font-family: monospace; background: #181818; color: #eee; }
+    h1 { color: #ffb300; }
+    ul { line-height: 1.7; }
+    a { color: #4fc3f7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .desc { color: #bdbdbd; font-size: 0.95em; margin-bottom: 0.5em; }
+    .example { color: #81c784; font-size: 0.93em; margin-bottom: 1.2em; }
+  </style>
+</head>
+<body>
+  <h1>PeakeCoin API JS Directory</h1>
+  <ul>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/announcements.js">announcements.js</a>
+      <div class="desc">Site-wide announcements and news.</div>
+      <div class="example">Example: <code>announcements.announcements</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/audit_log.js">audit_log.js</a>
+      <div class="desc">Audit log entries for admin or compliance review.</div>
+      <div class="example">Example: <code>auditLog.logs</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/bot_config.js">bot_config.js</a>
+      <div class="desc">Configuration for trading and automation bots.</div>
+      <div class="example">Example: <code>botConfig.config</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/bot_logs.js">bot_logs.js</a>
+      <div class="desc">Logs of bot activity and events.</div>
+      <div class="example">Example: <code>botLogs.logs</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/bot_status.js">bot_status.js</a>
+      <div class="desc">Status of all running bots (observation/monitoring).</div>
+      <div class="example">Example: <code>botStatus.bots</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/changelog.js">changelog.js</a>
+      <div class="desc">Changelog of site or API updates.</div>
+      <div class="example">Example: <code>changelog.changes</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/dex_accounts.js">dex_accounts.js</a>
+      <div class="desc">DEX (decentralized exchange) account info.</div>
+      <div class="example">Example: <code>dexAccounts.accounts</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/fee_schedule.js">fee_schedule.js</a>
+      <div class="desc">Trading fee schedule for all pairs.</div>
+      <div class="example">Example: <code>feeSchedule.fees</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/fetch_market.js">fetch_market.js</a>
+      <div class="desc">Live and fallback market stats for any Hive Engine token pair.</div>
+      <div class="example">Example: <code>fetchMarketStats('PEK/SWAP.HIVE')</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/ftp_config.js">ftp_config.js</a>
+      <div class="desc">FTP server configuration for file uploads.</div>
+      <div class="example">Example: <code>ftpConfig.config</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/games.js">games.js</a>
+      <div class="desc">List and metadata for all PeakeCoin games.</div>
+      <div class="example">Example: <code>games.games</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/game_achievements.js">game_achievements.js</a>
+      <div class="desc">Game achievements and unlockables.</div>
+      <div class="example">Example: <code>gameAchievements.achievements</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/game_events.js">game_events.js</a>
+      <div class="desc">Game event log (tournaments, maintenance, etc.).</div>
+      <div class="example">Example: <code>gameEvents.events</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/game_items.js">game_items.js</a>
+      <div class="desc">In-game items and collectibles.</div>
+      <div class="example">Example: <code>gameItems.items</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/hive_account.js">hive_account.js</a>
+      <div class="desc">Hive account information and details.</div>
+      <div class="example">Example: <code>hiveAccount.info</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/hive_transactions.js">hive_transactions.js</a>
+      <div class="desc">Transaction history for a Hive account.</div>
+      <div class="example">Example: <code>hiveTransactions.history</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/hive_wallet.js">hive_wallet.js</a>
+      <div class="desc">Wallet balances and information for Hive accounts.</div>
+      <div class="example">Example: <code>hiveWallet.balances</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/leaderboard.js">leaderboard.js</a>
+      <div class="desc">Global and friends leaderboard data.</div>
+      <div class="example">Example: <code>leaderboard.data</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/login_status.js">login_status.js</a>
+      <div class="desc">Login status for users and bots.</div>
+      <div class="example">Example: <code>loginStatus.status</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/market_stats.js">market_stats.js</a>
+      <div class="desc">Market statistics for PeakeCoin and other tokens.</div>
+      <div class="example">Example: <code>marketStats.stats</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/match_engine_status.js">match_engine_status.js</a>
+      <div class="desc">Status of the match engine for games.</div>
+      <div class="example">Example: <code>matchEngine.status</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/mud_state.js">mud_state.js</a>
+      <div class="desc">Current state of the mud (marketplace) for games.</div>
+      <div class="example">Example: <code>mudState.current</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/network_status.js">network_status.js</a>
+      <div class="desc">Network status and connectivity information.</div>
+      <div class="example">Example: <code>networkStatus.info</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/orderbook.js">orderbook.js</a>
+      <div class="desc">Order book data for market pairs.</div>
+      <div class="example">Example: <code>orderbook.data</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/orders.js">orders.js</a>
+      <div class="desc">Open and past orders for users.</div>
+      <div class="example">Example: <code>orders.open</code>, <code>orders.past</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/order_fills.js">order_fills.js</a>
+      <div class="desc">Details of order fills and trade executions.</div>
+      <div class="example">Example: <code>orderFills.details</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/pairs.js">pairs.js</a>
+      <div class="desc">Trading pairs available on the exchange.</div>
+      <div class="example">Example: <code>pairs.available</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/pending_withdrawals.js">pending_withdrawals.js</a>
+      <div class="desc">Pending withdrawal requests and their status.</div>
+      <div class="example">Example: <code>pendingWithdrawals.requests</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/poker_history.js">poker_history.js</a>
+      <div class="desc">History of poker hands and results.</div>
+      <div class="example">Example: <code>pokerHistory.hands</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/poker_leaderboard.js">poker_leaderboard.js</a>
+      <div class="desc">Leaderboard for poker players.</div>
+      <div class="example">Example: <code>pokerLeaderboard.players</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/poker_state.js">poker_state.js</a>
+      <div class="desc">Current state of the poker game (active hands, players, etc.).</div>
+      <div class="example">Example: <code>pokerState.current</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/sessions.js">sessions.js</a>
+      <div class="desc">User sessions and their activity status.</div>
+      <div class="example">Example: <code>sessions.active</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/status.js">status.js</a>
+      <div class="desc">Overall system status and health checks.</div>
+      <div class="example">Example: <code>systemStatus.overall</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/support.js">support.js</a>
+      <div class="desc">Support ticket system and status.</div>
+      <div class="example">Example: <code>support.tickets</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/swap_status.js">swap_status.js</a>
+      <div class="desc">Status of token swaps and liquidity pools.</div>
+      <div class="example">Example: <code>swapStatus.pools</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/swapbot_status.js">swapbot_status.js</a>
+      <div class="desc">Status of the swap bot and its operations.</div>
+      <div class="example">Example: <code>swapbotStatus.operations</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/tipping_bots.js">tipping_bots.js</a>
+      <div class="desc">Configuration and status of tipping bots.</div>
+      <div class="example">Example: <code>tippingBots.config</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/token_metadata.js">token_metadata.js</a>
+      <div class="desc">Metadata for all tokens on the platform.</div>
+      <div class="example">Example: <code>tokenMetadata.all</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/trade_history.js">trade_history.js</a>
+      <div class="desc">Historical trade data for analysis.</div>
+      <div class="example">Example: <code>tradeHistory.data</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/trading_bots.js">trading_bots.js</a>
+      <div class="desc">Configuration and status of trading bots.</div>
+      <div class="example">Example: <code>tradingBots.config</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/users.js">users.js</a>
+      <div class="desc">User profiles and account details.</div>
+      <div class="example">Example: <code>users.profiles</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/user_settings.js">user_settings.js</a>
+      <div class="desc">User-specific settings and preferences.</div>
+      <div class="example">Example: <code>userSettings.preferences</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/voting_bots.js">voting_bots.js</a>
+      <div class="desc">Configuration and status of voting bots.</div>
+      <div class="example">Example: <code>votingBots.config</code></div>
+    </li>
+    <li>
+      <a href="https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api@main/peakecoin_api/wallet_balances.js">wallet_balances.js</a>
+      <div class="desc">Wallet balances for all users.</div>
+      <div class="example">Example: <code>walletBalances.all</code></div>
+    </li>
+  </ul>
+  <p style="margin-top:2em;font-size:0.9em;color:#aaa;">Replace <code>yourusername/yourrepo@main</code> with your actual GitHub username, repo, and branch/tag as needed.</p>
+</body>
+</html>

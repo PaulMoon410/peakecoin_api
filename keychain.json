@@ -1,0 +1,21 @@
+{
+  "description": "Helpers for Hive Keychain signature requests (signBuffer, customJson, transfer, etc.)",
+  "methods": [
+    {
+      "name": "requestSignBuffer",
+      "params": ["account", "message", "callback"],
+      "description": "Request a signature of an arbitrary string/buffer using Hive Keychain."
+    },
+    {
+      "name": "requestCustomJson",
+      "params": ["account", "json", "id", "displayMsg", "callback"],
+      "description": "Request a custom_json operation signature and broadcast via Hive Keychain."
+    },
+    {
+      "name": "requestTransfer",
+      "params": ["account", "to", "amount", "memo", "currency", "callback"],
+      "description": "Request a transfer operation signature and broadcast via Hive Keychain."
+    }
+  ],
+  "usage": "keychainHelpers.requestSignBuffer('user', 'string', callback)\nkeychainHelpers.requestCustomJson('user', {...}, 'id', 'Sign this?', callback)\nkeychainHelpers.requestTransfer('user', 'to', '1.000', 'memo', 'HIVE', callback)"
+}

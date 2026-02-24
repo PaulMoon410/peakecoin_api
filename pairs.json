@@ -1,0 +1,11 @@
+{"pairs": [
+    {"base": "PEK", "quote": "SWAP.HIVE"},
+    {"base": "PEK", "quote": "SWAP.BTC"},
+    {"base": "PEK", "quote": "SWAP.LTC"},
+    {"base": "PEK", "quote": "SWAP.ETH"},
+    {"base": "PEK", "quote": "SWAP.DOGE"},
+    {"base": "PEK", "quote": "SWAP.MATIC"},
+    {"base": "PEK", "quote": "SWAP.HBD"},
+    {"base": "PEK", "quote": "PIMP"}
+  ]
+}

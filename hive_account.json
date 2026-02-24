@@ -1,0 +1,13 @@
+{
+  "username": "demo_user",
+  "balances": {
+    "HIVE": 123.45,
+    "HBD": 67.89,
+    "HP": 1000.00
+  },
+  "reputation": 55.5,
+  "vesting_shares": "100000.000000 VESTS",
+  "delegated_vesting_shares": "0.000000 VESTS",
+  "received_vesting_shares": "0.000000 VESTS",
+  "last_update": "2025-05-25T12:00:00Z"
+}

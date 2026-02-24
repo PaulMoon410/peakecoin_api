@@ -1,0 +1,6 @@
+{
+  "enabled": false,
+  "provider": "hive-keychain",
+  "demoMode": true,
+  "notes": "Set 'enabled' to true and implement hive_wallet.js for wallet support."
+}

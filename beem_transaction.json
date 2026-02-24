@@ -1,0 +1,4 @@
+{
+  "description": "Helper for building and broadcasting Hive Engine custom_json transactions using Beem (Python).",
+  "usage": "from beem_transaction import send_hive_engine_tx\nsend_hive_engine_tx(\n    username='youraccount',\n    posting_key='your_posting_key',\n    contract_name='tokens',\n    contract_action='transfer',\n    contract_payload={\n        'symbol': 'PEK',\n        'to': 'recipient',\n        'quantity': '1.000',\n        'memo': 'Test'\n    }\n)"
+}
