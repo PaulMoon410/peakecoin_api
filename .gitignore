@@ -1,0 +1,12 @@
+.vscode/
+
+# Local secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Runtime/local state
+payment_queue.json
+__pycache__/
+*.pyc

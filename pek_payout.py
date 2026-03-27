@@ -6,8 +6,13 @@ import time
 import json
 import os
 
-# Set up Nectar with your active key (keep this safe!)
-nectar = Nectar(keys=['5Jjp6U8jJBu82xnPteQa5M42Zd5nRCrD3PkyPwWmGBGu3yQubTa'])  # peake.matic active key
+# Set up Nectar with your active key from environment variables.
+# Example (PowerShell): $env:PEAKEMATIC_ACTIVE_KEY="<your_active_private_key>"
+active_key = os.getenv('PEAKEMATIC_ACTIVE_KEY')
+if not active_key:
+    raise RuntimeError('Missing PEAKEMATIC_ACTIVE_KEY environment variable.')
+
+nectar = Nectar(keys=[active_key])
 engine = Engine(nectar)
 
 QUEUE_FILE = 'payment_queue.json'
