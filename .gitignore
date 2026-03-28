@@ -10,3 +10,9 @@
 payment_queue.json
 __pycache__/
 *.pyc
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,31 +1,100 @@
 [
   {
-    "name": "announcements",
-    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/announcements.js",
-    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/announcements.json",
-    "description": "Site-wide announcements and news.",
-    "usage": "announcements.announcements"
+    "name": "hive_api_endpoints",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_api_endpoints.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_api_endpoints.json",
+    "description": "Reference for local Hive backend REST endpoints.",
+    "usage": "hiveApiEndpoints.endpoints"
   },
   {
-    "name": "audit_log",
-    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/audit_log.js",
-    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/audit_log.json",
-    "description": "Audit log entries for admin or compliance review.",
-    "usage": "auditLog.logs"
+    "name": "hive_account",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_account.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_account.json",
+    "description": "Hive account information and details.",
+    "usage": "hiveAccount.info"
   },
   {
-    "name": "blockLog",
-    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/blockLog.js",
-    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/blockLog.json",
-    "description": "Static/fallback log of blockchain blocks processed by the PeakeCoin system.",
-    "usage": "blockLog.blocks"
+    "name": "hive_transactions",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_transactions.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_transactions.json",
+    "description": "Transaction history for a Hive account.",
+    "usage": "hiveTransactions.history"
   },
   {
-    "name": "bot_config",
-    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/bot_config.js",
-    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/bot_config.json",
-    "description": "Configuration for trading and automation bots.",
-    "usage": "botConfig.config"
+    "name": "hive_wallet",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_wallet.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_wallet.json",
+    "description": "Wallet balances and helper signing functions.",
+    "usage": "hiveWallet.balances"
+  },
+  {
+    "name": "hive_signer",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_signer.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_signer.json",
+    "description": "HiveSigner URL helpers for auth and signing.",
+    "usage": "hiveSigner.getLoginUrl(app, redirectUri)"
+  },
+  {
+    "name": "keychain",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/keychain.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/keychain.json",
+    "description": "Hive Keychain helper wrappers.",
+    "usage": "KeychainAPI.requestSignBuffer(account, message, cb)"
+  },
+  {
+    "name": "local_news",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/local_news.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/local_news.json",
+    "description": "Static local news feed for rendering posts on your website.",
+    "usage": "renderLocalNews('#news-feed')"
+  },
+  {
+    "name": "fetch_market",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/fetch_market.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/fetch_market.json",
+    "description": "Live and fallback market stats for token pairs.",
+    "usage": "fetchMarketStats('PEK/SWAP.HIVE')"
+  },
+  {
+    "name": "market_stats",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/market_stats.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/market_stats.json",
+    "description": "Market statistics for PeakeCoin and other tokens.",
+    "usage": "marketStats.stats"
+  },
+  {
+    "name": "pairs",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/pairs.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/pairs.json",
+    "description": "Trading pairs available on the exchange.",
+    "usage": "fetchPairs()"
+  },
+  {
+    "name": "orderbook",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/orderbook.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/orderbook.json",
+    "description": "Order book data for market pairs.",
+    "usage": "fetchOrderbook({symbol:'PEK', baseSymbol:'SWAP.HIVE'})"
+  },
+  {
+    "name": "trade_history",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/trade_history.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/trade_history.json",
+    "description": "Historical trade data for analysis.",
+    "usage": "fetchTradeHistory({symbol:'PEK', baseSymbol:'SWAP.HIVE'})"
+  },
+  {
+    "name": "wallet_balances",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/wallet_balances.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/wallet_balances.json",
+    "description": "Wallet balances for user accounts.",
+    "usage": "fetchWalletBalances({account:'peakecoin'})"
+  },
+  {
+    "name": "token_metadata",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/token_metadata.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/token_metadata.json",
+    "description": "Metadata for available tokens.",
+    "usage": "tokenMetadata.tokens"
   }
-  // ...add all other modules here in the same format...
 ]

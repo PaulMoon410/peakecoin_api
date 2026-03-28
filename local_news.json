@@ -1,0 +1,42 @@
+{
+  "updated_at": "2026-03-27T00:00:00Z",
+  "featured": {
+    "id": "news-001",
+    "title": "PeakeCoin Local News Feed Added",
+    "summary": "A lightweight static news feed is now available for websites using the PeakeCoin API repo.",
+    "category": "update",
+    "location": "Harford County",
+    "author": "PeakeCoin",
+    "published_at": "2026-03-27T00:00:00Z",
+    "url": "https://github.com/PaulMoon410/peakecoin_api",
+    "tags": ["news", "website", "api"]
+  },
+  "articles": [
+    {
+      "id": "news-001",
+      "title": "PeakeCoin Local News Feed Added",
+      "summary": "A lightweight static news feed is now available for websites using the PeakeCoin API repo.",
+      "content": "Use local_news.js directly in a browser or fetch local_news.json from your frontend. You can show featured posts, render a news list, or filter by category.",
+      "category": "update",
+      "location": "Harford County",
+      "author": "PeakeCoin",
+      "published_at": "2026-03-27T00:00:00Z",
+      "url": "https://github.com/PaulMoon410/peakecoin_api",
+      "image": "",
+      "tags": ["news", "website", "api"]
+    },
+    {
+      "id": "news-002",
+      "title": "Community Events Can Be Added Easily",
+      "summary": "Add more articles to local_news.json to publish neighborhood updates, events, and announcements.",
+      "content": "This static format is meant to stay simple so anyone can update it. Add more articles with title, summary, location, and published_at fields to keep your site fresh.",
+      "category": "community",
+      "location": "Local",
+      "author": "PeakeCoin",
+      "published_at": "2026-03-26T18:00:00Z",
+      "url": "",
+      "image": "",
+      "tags": ["community", "events"]
+    }
+  ]
+}

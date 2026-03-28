@@ -2,6 +2,15 @@
 
 Below is a directory of all PeakeCoin API JS modules, each with a description and example usage. All CDN links use your actual GitHub repo: `PaulMoon410/peakecoin_api`.
 
+## New Hive backend support
+
+- Local backend docs: `hive-backend/README.md`
+- Static endpoint map: `hive_api_endpoints.js` + `hive_api_endpoints.json`
+
+- [hive_api_endpoints.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/hive_api_endpoints.js)
+  - *Reference map for local Hive backend REST endpoints.*
+  - Example: `hiveApiEndpoints.endpoints`
+
 - [announcements.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/announcements.js)
   - *Site-wide announcements and news.*
   - Example: `announcements.announcements`
@@ -32,6 +41,9 @@ Below is a directory of all PeakeCoin API JS modules, each with a description an
 - [fee_schedule.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/fee_schedule.js)
   - *Trading fee schedule for all pairs.*
   - Example: `feeSchedule.fees`
+- [local_news.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/local_news.js)
+  - *Static local news feed for rendering posts on your website.*
+  - Example: `renderLocalNews('#news-feed')`
 - [fetch_market.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/fetch_market.js)
   - *Live and fallback market stats for any Hive Engine token pair.*
   - Example: `fetchMarketStats('PEK/SWAP.HIVE')`

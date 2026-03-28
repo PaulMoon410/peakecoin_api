@@ -1,0 +1,46 @@
+{
+  "service": "hive-backend",
+  "version": "1.0.0",
+  "base_url": "http://localhost:3000/api",
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/health",
+      "description": "Health check for backend status"
+    },
+    {
+      "method": "GET",
+      "path": "/hive/account/:name",
+      "description": "Get one Hive account"
+    },
+    {
+      "method": "GET",
+      "path": "/hive/accounts?names=account1,account2",
+      "description": "Get multiple Hive accounts"
+    },
+    {
+      "method": "GET",
+      "path": "/hive/account/:name/history?limit=20",
+      "description": "Get account history"
+    },
+    {
+      "method": "GET",
+      "path": "/hive/chain/properties",
+      "description": "Get dynamic global chain properties"
+    },
+    {
+      "method": "GET",
+      "path": "/engine/balances/:account?limit=100",
+      "description": "Get Hive-Engine token balances for an account"
+    },
+    {
+      "method": "GET",
+      "path": "/engine/trades?symbol=PEK&limit=50",
+      "description": "Get Hive-Engine trade history (optionally by symbol)"
+    }
+  ],
+  "notes": [
+    "All responses follow { ok, data } shape on success.",
+    "Run the backend from /hive-backend before calling local endpoints."
+  ]
+}

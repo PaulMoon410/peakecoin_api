@@ -1,40 +1,108 @@
 // api_listing.js
-// PeakeCoin API: Importable listing of all API JS modules
-// Usage: import { apiModules } from './api_listing.js' or use window.apiModules in browser
+// Importable listing of key static API modules and backend endpoint reference.
 
-export const apiModules = [
+const CDN_BASE = "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api";
+
+const apiModules = [
   {
-    name: "announcements",
-    js: "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/announcements.js",
-    json: "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/announcements.json",
-    description: "Site-wide announcements and news.",
-    usage: "announcements.announcements"
+    name: "hive_api_endpoints",
+    js: `${CDN_BASE}/hive_api_endpoints.js`,
+    json: `${CDN_BASE}/hive_api_endpoints.json`,
+    description: "Reference for local Hive backend REST endpoints.",
+    usage: "hiveApiEndpoints.endpoints"
   },
   {
-    name: "audit_log",
-    js: "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/audit_log.js",
-    json: "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/audit_log.json",
-    description: "Audit log entries for admin or compliance review.",
-    usage: "auditLog.logs"
+    name: "hive_account",
+    js: `${CDN_BASE}/hive_account.js`,
+    json: `${CDN_BASE}/hive_account.json`,
+    description: "Hive account information and details.",
+    usage: "hiveAccount.info"
   },
   {
-    name: "blockLog",
-    js: "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/blockLog.js",
-    json: "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/blockLog.json",
-    description: "Static/fallback log of blockchain blocks processed by the PeakeCoin system.",
-    usage: "blockLog.blocks"
+    name: "hive_transactions",
+    js: `${CDN_BASE}/hive_transactions.js`,
+    json: `${CDN_BASE}/hive_transactions.json`,
+    description: "Transaction history for a Hive account.",
+    usage: "hiveTransactions.history"
   },
   {
-    name: "bot_config",
-    js: "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/bot_config.js",
-    json: "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/bot_config.json",
-    description: "Configuration for trading and automation bots.",
-    usage: "botConfig.config"
+    name: "hive_wallet",
+    js: `${CDN_BASE}/hive_wallet.js`,
+    json: `${CDN_BASE}/hive_wallet.json`,
+    description: "Wallet balances and helper signing functions.",
+    usage: "hiveWallet.balances"
   },
-  // ...add all other modules here in the same format...
+  {
+    name: "hive_signer",
+    js: `${CDN_BASE}/hive_signer.js`,
+    json: `${CDN_BASE}/hive_signer.json`,
+    description: "HiveSigner URL helpers for auth and signing.",
+    usage: "hiveSigner.getLoginUrl(app, redirectUri)"
+  },
+  {
+    name: "keychain",
+    js: `${CDN_BASE}/keychain.js`,
+    json: `${CDN_BASE}/keychain.json`,
+    description: "Hive Keychain helper wrappers.",
+    usage: "KeychainAPI.requestSignBuffer(account, message, cb)"
+  },
+  {
+    name: "local_news",
+    js: `${CDN_BASE}/local_news.js`,
+    json: `${CDN_BASE}/local_news.json`,
+    description: "Static local news feed for rendering posts on your website.",
+    usage: "renderLocalNews('#news-feed')"
+  },
+  {
+    name: "fetch_market",
+    js: `${CDN_BASE}/fetch_market.js`,
+    json: `${CDN_BASE}/fetch_market.json`,
+    description: "Live and fallback market stats for token pairs.",
+    usage: "fetchMarketStats('PEK/SWAP.HIVE')"
+  },
+  {
+    name: "market_stats",
+    js: `${CDN_BASE}/market_stats.js`,
+    json: `${CDN_BASE}/market_stats.json`,
+    description: "Market statistics for PeakeCoin and other tokens.",
+    usage: "marketStats.stats"
+  },
+  {
+    name: "pairs",
+    js: `${CDN_BASE}/pairs.js`,
+    json: `${CDN_BASE}/pairs.json`,
+    description: "Trading pairs available on the exchange.",
+    usage: "fetchPairs()"
+  },
+  {
+    name: "orderbook",
+    js: `${CDN_BASE}/orderbook.js`,
+    json: `${CDN_BASE}/orderbook.json`,
+    description: "Order book data for market pairs.",
+    usage: "fetchOrderbook({symbol:'PEK', baseSymbol:'SWAP.HIVE'})"
+  },
+  {
+    name: "trade_history",
+    js: `${CDN_BASE}/trade_history.js`,
+    json: `${CDN_BASE}/trade_history.json`,
+    description: "Historical trade data for analysis.",
+    usage: "fetchTradeHistory({symbol:'PEK', baseSymbol:'SWAP.HIVE'})"
+  },
+  {
+    name: "wallet_balances",
+    js: `${CDN_BASE}/wallet_balances.js`,
+    json: `${CDN_BASE}/wallet_balances.json`,
+    description: "Wallet balances for user accounts.",
+    usage: "fetchWalletBalances({account:'peakecoin'})"
+  },
+  {
+    name: "token_metadata",
+    js: `${CDN_BASE}/token_metadata.js`,
+    json: `${CDN_BASE}/token_metadata.json`,
+    description: "Metadata for available tokens.",
+    usage: "tokenMetadata.tokens"
+  }
 ];
 
-// For CDN/global usage:
-if (typeof window !== 'undefined') {
-  window.apiModules = apiModules;
-}
+if (typeof module !== 'undefined') module.exports = { apiModules };
+if (typeof window !== 'undefined') window.apiModules = apiModules;
