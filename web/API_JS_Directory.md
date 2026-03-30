@@ -44,6 +44,9 @@ Below is a directory of all PeakeCoin API JS modules, each with a description an
 - [local_news.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/local_news.js)
   - *Static local news feed. Use renderLocalNews() or fetch JSON directly.*
   - Example: `await renderLocalNews('#news-feed', { jsonUrl: 'local_news.json' })`
+- [payout_services.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/payout_services.js)
+  - *Static payout service map for PEK, HiveSigner, Keychain, and queued payout flows.*
+  - Example: `getPayoutServices()`
 - [peake_ui.js](https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/peake_ui.js)
   - *Website UI toolkit for reveal animations, theme toggle, and quick layout components.*
   - Example: `PeakeUI.init({backgroundEffects: true})`

@@ -68,6 +68,13 @@ const apiModules = [
     usage: "RssFeedHelper.fetchSourceById('cnsmaryland', { limit: 5 })"
   },
   {
+    name: "payout_services",
+    js: `${CDN_BASE}/payout_services.js`,
+    json: `${CDN_BASE}/payout_services.json`,
+    description: "Static payout service map for PEK, HiveSigner, Keychain, and queued payout flows.",
+    usage: "getPayoutServices()"
+  },
+  {
     name: "peake_ui",
     js: `${CDN_BASE}/peake_ui.js`,
     json: `${CDN_BASE}/peake_ui.json`,
