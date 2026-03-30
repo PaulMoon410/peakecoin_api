@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local News Widget Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111827;
+      color: #f9fafb;
+      margin: 0;
+      padding: 2rem;
+    }
+    .wrap {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #fbbf24;
+    }
+    #news-feed {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .local-news-item {
+      background: #1f2937;
+      border: 1px solid #374151;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .local-news-item h3 {
+      margin: 0 0 0.5rem;
+    }
+    .local-news-item a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+    .local-news-item a:hover {
+      text-decoration: underline;
+    }
+    .local-news-meta {
+      color: #9ca3af;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+    .code {
+      background: #0b1220;
+      border: 1px solid #374151;
+      border-radius: 8px;
+      padding: 1rem;
+      overflow: auto;
+      margin-top: 1.5rem;
+      color: #cbd5e1;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Local News Widget Demo</h1>
+    <p>Example of using <strong>local_news.js</strong> to render static news items on a website.</p>
+
+    <h2>Using Embedded Data</h2>
+    <div id="news-feed"></div>
+
+    <h2>Using External JSON File</h2>
+    <div id="news-feed-external"></div>
+
+    <div class="code">
+&lt;script src="local_news.js"&gt;&lt;/script&gt;
+&lt;div id="news-feed"&gt;&lt;/div&gt;
+&lt;script&gt;
+  // Option 1: Use embedded data (synchronous)
+  renderLocalNews('#news-feed', { limit: 5 });
+  
+  // Option 2: Load from external JSON (asynchronous)
+  renderLocalNews('#news-feed-external', { 
+    limit: 5,
+    jsonUrl: 'local_news.json'
+  });
+&lt;/script&gt;
+    </div>
+  </div>
+
+  <script src="local_news.js"></script>
+  <script>
+    // Use embedded data
+    renderLocalNews('#news-feed', { limit: 5 });
+    
+    // Load from external JSON
+    renderLocalNews('#news-feed-external', { 
+      limit: 5,
+      jsonUrl: 'local_news.json'
+    });
+  </script>
+</body>
+</html>
