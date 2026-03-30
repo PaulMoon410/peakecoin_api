@@ -1,43 +1,69 @@
 // Static local news feed and helper functions for websites.
 const localNews = {
-  updated_at: "2026-03-27T00:00:00Z",
+  updated_at: "2026-03-30T00:00:00Z",
   featured: {
-    id: "news-001",
-    title: "PeakeCoin Local News Feed Added",
-    summary: "A lightweight static news feed is now available for websites using the PeakeCoin API repo.",
+    id: "news-20260330-001",
+    title: "PeakeCoin Site News Feed Is Live",
+    summary: "The live PeakeCoin ecosystem page is now rendering local API news directly from local_news.js.",
     category: "update",
-    location: "Harford County",
+    location: "Maryland",
     author: "PeakeCoin",
-    published_at: "2026-03-27T00:00:00Z",
-    url: "https://github.com/PaulMoon410/peakecoin_api",
-    tags: ["news", "website", "api"]
+    published_at: "2026-03-30T00:00:00Z",
+    url: "https://www.peakecoin.info/",
+    tags: ["news", "website", "api", "live"]
   },
   articles: [
     {
-      id: "news-001",
-      title: "PeakeCoin Local News Feed Added",
-      summary: "A lightweight static news feed is now available for websites using the PeakeCoin API repo.",
-      content: "Use local_news.js directly in a browser or fetch local_news.json from your frontend. You can show featured posts, render a news list, or filter by category.",
+      id: "news-20260330-001",
+      title: "PeakeCoin Site News Feed Is Live",
+      summary: "The live PeakeCoin ecosystem page is now rendering local API news directly from local_news.js.",
+      content: "PeakeCoin.info now shows Local & Maryland News entries from the local API module. This keeps updates fast and avoids backend dependency for basic news output.",
       category: "update",
-      location: "Harford County",
+      location: "Maryland",
       author: "PeakeCoin",
-      published_at: "2026-03-27T00:00:00Z",
-      url: "https://github.com/PaulMoon410/peakecoin_api",
+      published_at: "2026-03-30T00:00:00Z",
+      url: "https://www.peakecoin.info/",
       image: "",
-      tags: ["news", "website", "api"]
+      tags: ["news", "website", "api", "live"]
     },
     {
-      id: "news-002",
-      title: "Community Events Can Be Added Easily",
-      summary: "Add more articles to local_news.json to publish neighborhood updates, events, and announcements.",
-      content: "This static format is meant to stay simple so anyone can update it. Add more articles with title, summary, location, and published_at fields to keep your site fresh.",
-      category: "community",
-      location: "Local",
+      id: "news-20260330-002",
+      title: "Repo Updated With JS-First API Modules",
+      summary: "Recent updates focused on JavaScript modules for direct website integration.",
+      content: "Recent repo work centered on JS-first delivery, including local_news.js, peake_ui.js, and hive_api_endpoints.js. This reduces integration friction for frontend pages pulling data from GitHub/Geocities mirrors.",
+      category: "development",
+      location: "GitHub",
       author: "PeakeCoin",
-      published_at: "2026-03-26T18:00:00Z",
-      url: "",
+      published_at: "2026-03-30T00:00:00Z",
+      url: "https://github.com/PaulMoon410/peakecoin_api",
       image: "",
-      tags: ["community", "events"]
+      tags: ["github", "javascript", "modules", "frontend"]
+    },
+    {
+      id: "news-20260330-003",
+      title: "Hive Backend Starter Available",
+      summary: "A Node.js Hive backend starter is available for account and market lookup endpoints.",
+      content: "The new hive-backend starter includes health checks and Hive/Hive-Engine read endpoints so the project can grow from static feeds into richer live integrations.",
+      category: "hive",
+      location: "Ecosystem",
+      author: "PeakeCoin",
+      published_at: "2026-03-29T18:00:00Z",
+      url: "https://github.com/PaulMoon410/peakecoin_api/tree/main/hive-backend",
+      image: "",
+      tags: ["hive", "backend", "nodejs", "api"]
+    },
+    {
+      id: "news-20260330-004",
+      title: "Crypto RSS Watchlist Added",
+      summary: "Use the new crypto RSS source list to plug external crypto headlines into the PeakeCoin website.",
+      content: "A crypto RSS source file has been added so your site can switch between local PeakeCoin updates and external crypto headlines. This supports a hybrid news model.",
+      category: "crypto",
+      location: "Web",
+      author: "PeakeCoin",
+      published_at: "2026-03-30T00:00:00Z",
+      url: "https://github.com/PaulMoon410/peakecoin_api",
+      image: "",
+      tags: ["crypto", "rss", "news", "feeds"]
     }
   ]
 };

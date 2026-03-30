@@ -54,6 +54,13 @@ const apiModules = [
     usage: "await renderLocalNews('#news-feed', { jsonUrl: 'local_news.json' })"
   },
   {
+    name: "crypto_rss_sources",
+    js: `${CDN_BASE}/crypto_rss_sources.js`,
+    json: `${CDN_BASE}/crypto_rss_sources.json`,
+    description: "Curated crypto RSS feed endpoints for external news integration.",
+    usage: "getCryptoRssSources()"
+  },
+  {
     name: "peake_ui",
     js: `${CDN_BASE}/peake_ui.js`,
     json: `${CDN_BASE}/peake_ui.json`,

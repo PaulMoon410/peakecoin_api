@@ -49,6 +49,13 @@
     "usage": "await renderLocalNews('#news-feed', { jsonUrl: 'local_news.json' })"
   },
   {
+    "name": "crypto_rss_sources",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/crypto_rss_sources.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/crypto_rss_sources.json",
+    "description": "Curated crypto RSS feed endpoints for external news integration.",
+    "usage": "getCryptoRssSources()"
+  },
+  {
     "name": "peake_ui",
     "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/peake_ui.js",
     "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/peake_ui.json",
