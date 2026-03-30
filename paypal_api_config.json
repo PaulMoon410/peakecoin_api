@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-03-30T00:00:00Z",
+  "provider": "paypal",
+  "recommended": true,
+  "mode": "sandbox",
+  "base_urls": {
+    "sandbox": "https://api-m.sandbox.paypal.com",
+    "live": "https://api-m.paypal.com"
+  },
+  "oauth": {
+    "token_path": "/v1/oauth2/token"
+  },
+  "payouts": {
+    "create_path": "/v1/payments/payouts",
+    "get_path": "/v1/payments/payouts/{payout_batch_id}"
+  },
+  "credential_fields": [
+    {
+      "name": "PAYPAL_CLIENT_ID",
+      "required": true,
+      "source": "environment"
+    },
+    {
+      "name": "PAYPAL_CLIENT_SECRET",
+      "required": true,
+      "source": "environment"
+    },
+    {
+      "name": "PAYPAL_MODE",
+      "required": false,
+      "source": "environment",
+      "default": "sandbox"
+    }
+  ],
+  "recipient_fields": ["recipient_type", "receiver", "amount", "currency", "note", "sender_item_id"],
+  "notes": [
+    "Use sandbox first.",
+    "Store credentials only in environment variables.",
+    "PayPal is the strongest candidate for automated off-chain payouts in this repo."
+  ]
+}

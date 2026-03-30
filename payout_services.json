@@ -73,9 +73,11 @@
       "status": "available",
       "token_support": ["USD"],
       "flow": "manual-or-api",
+      "automation_level": "full",
       "description": "Off-chain payout option using PayPal email, PayPal.Me, or business payout APIs.",
-      "source_files": ["payout_services.js", "payout_services.json"],
+      "source_files": ["payout_services.js", "payout_services.json", "paypal_api_config.js", "paypal_payout.py"],
       "fields": ["recipient", "amount", "currency", "note", "paypal_email", "paypal_handle"],
+      "credential_fields": ["PAYPAL_CLIENT_ID", "PAYPAL_CLIENT_SECRET", "PAYPAL_MODE"],
       "link_template": "https://www.paypal.com/paypalme/{handle}/{amount}"
     },
     {
@@ -86,9 +88,11 @@
       "status": "available",
       "token_support": ["USD", "BTC"],
       "flow": "manual",
+      "automation_level": "limited",
       "description": "Off-chain payout option using Cash App cashtags or direct Cash App settlement.",
       "source_files": ["payout_services.js", "payout_services.json"],
       "fields": ["recipient", "amount", "currency", "note", "cashtag"],
+      "credential_fields": [],
       "link_template": "https://cash.app/${handle}"
     },
     {
@@ -99,9 +103,11 @@
       "status": "available",
       "token_support": ["USD"],
       "flow": "manual-or-deeplink",
+      "automation_level": "limited",
       "description": "Off-chain payout option using Venmo usernames or mobile deeplink handoff.",
       "source_files": ["payout_services.js", "payout_services.json"],
       "fields": ["recipient", "amount", "currency", "note", "venmo_handle"],
+      "credential_fields": [],
       "link_template": "venmo://paycharge?txn=pay&recipients={handle}&amount={amount}&note={note}"
     }
   ]

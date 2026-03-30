@@ -75,6 +75,13 @@ const apiModules = [
     usage: "getPayoutServices()"
   },
   {
+    name: "paypal_api_config",
+    js: `${CDN_BASE}/paypal_api_config.js`,
+    json: `${CDN_BASE}/paypal_api_config.json`,
+    description: "PayPal API template for automated off-chain payouts using client credentials.",
+    usage: "buildPaypalPayoutItem({ receiver:'user@example.com', amount:'10.00' })"
+  },
+  {
     name: "peake_ui",
     js: `${CDN_BASE}/peake_ui.js`,
     json: `${CDN_BASE}/peake_ui.json`,

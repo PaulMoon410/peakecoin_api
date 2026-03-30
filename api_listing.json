@@ -70,6 +70,13 @@
     "usage": "getPayoutServices()"
   },
   {
+    "name": "paypal_api_config",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/paypal_api_config.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/paypal_api_config.json",
+    "description": "PayPal API template for automated off-chain payouts using client credentials.",
+    "usage": "buildPaypalPayoutItem({ receiver:'user@example.com', amount:'10.00' })"
+  },
+  {
     "name": "peake_ui",
     "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/peake_ui.js",
     "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/peake_ui.json",
