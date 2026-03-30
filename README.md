@@ -28,3 +28,15 @@ Helpers included:
 - `localNews.articles`
 - `getLatestLocalNews(5)`
 - `renderLocalNews('#news-feed')`
+
+## Website animation + aesthetics toolkit
+
+Use [peake_ui.js](peake_ui.js), [peake_ui.css](peake_ui.css), and [peake_ui.json](peake_ui.json) for reusable animations and cleaner page setup.
+
+Quick start:
+
+1. Add stylesheet and script to your HTML.
+2. Call `PeakeUI.init({ backgroundEffects: true })`.
+3. Add `reveal` class to elements for scroll animations.
+
+For usage examples, see [peake_ui.json](peake_ui.json).

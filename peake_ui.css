@@ -1,0 +1,137 @@
+:root {
+  --pk-bg: #0b1020;
+  --pk-surface: #121a30;
+  --pk-surface-2: #1b2747;
+  --pk-text: #e7ecf6;
+  --pk-muted: #9aa7c2;
+  --pk-primary: #49b7ff;
+  --pk-accent: #ffd166;
+  --pk-border: rgba(255, 255, 255, 0.12);
+}
+
+:root[data-theme="light"] {
+  --pk-bg: #f4f7ff;
+  --pk-surface: #ffffff;
+  --pk-surface-2: #eef3ff;
+  --pk-text: #1b2440;
+  --pk-muted: #516082;
+  --pk-primary: #0067ff;
+  --pk-accent: #d18f00;
+  --pk-border: rgba(22, 33, 69, 0.14);
+}
+
+body {
+  background: radial-gradient(circle at top, #172545 0%, var(--pk-bg) 55%);
+  color: var(--pk-text);
+}
+
+.pk-header,
+.pk-footer,
+.pk-card {
+  border: 1px solid var(--pk-border);
+  background: linear-gradient(160deg, var(--pk-surface), var(--pk-surface-2));
+  border-radius: 14px;
+}
+
+.pk-header {
+  margin: 0 0 1.25rem;
+}
+
+.pk-header-inner,
+.pk-footer-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.9rem 1rem;
+}
+
+.pk-header-inner {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pk-brand {
+  color: var(--pk-accent);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.pk-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pk-nav-link {
+  color: var(--pk-text);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.pk-nav-link:hover {
+  opacity: 1;
+  color: var(--pk-primary);
+}
+
+.pk-btn {
+  border: 1px solid var(--pk-border);
+  border-radius: 10px;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+  color: var(--pk-text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.pk-btn:hover {
+  border-color: var(--pk-primary);
+}
+
+.pk-btn-ghost {
+  background: transparent;
+}
+
+.reveal,
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.is-visible,
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pk-sparkle-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pk-spark {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--pk-primary);
+  opacity: 0;
+  animation-name: pk-twinkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pk-twinkle {
+  0%,
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+}

@@ -48,22 +48,24 @@ async function fetchLocalNews(jsonUrl = 'local_news.json') {
   return res.json();
 }
 
-function getLatestLocalNews(limit = 10, category) {
-  const items = [...localNews.articles]
+function getLatestLocalNews(limit = 10, category, newsData = null) {
+  const source = newsData || localNews;
+  const items = [...source.articles]
     .filter((item) => !category || item.category === category)
     .sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
 
   return items.slice(0, limit);
 }
 
-function renderLocalNews(target, options = {}) {
+async function renderLocalNews(target, options = {}) {
   const {
     limit = 5,
     category,
     showCategory = true,
     showLocation = true,
     showSummary = true,
-    emptyMessage = 'No local news available.'
+    emptyMessage = 'No local news available.',
+    jsonUrl = null
   } = options;
 
   const element = typeof target === 'string' ? document.querySelector(target) : target;
@@ -71,7 +73,17 @@ function renderLocalNews(target, options = {}) {
     throw new Error('renderLocalNews target was not found.');
   }
 
-  const items = getLatestLocalNews(limit, category);
+  // Load external JSON if URL provided, otherwise use embedded data
+  let newsData = localNews;
+  if (jsonUrl) {
+    try {
+      newsData = await fetchLocalNews(jsonUrl);
+    } catch (error) {
+      console.error('Failed to load external news JSON, using embedded data:', error);
+    }
+  }
+
+  const items = getLatestLocalNews(limit, category, newsData);
   if (!items.length) {
     element.innerHTML = `<p>${emptyMessage}</p>`;
     return [];

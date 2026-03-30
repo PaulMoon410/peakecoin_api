@@ -50,8 +50,15 @@ const apiModules = [
     name: "local_news",
     js: `${CDN_BASE}/local_news.js`,
     json: `${CDN_BASE}/local_news.json`,
-    description: "Static local news feed for rendering posts on your website.",
-    usage: "renderLocalNews('#news-feed')"
+    description: "Static local news feed. Call renderLocalNews() or fetch JSON directly.",
+    usage: "await renderLocalNews('#news-feed', { jsonUrl: 'local_news.json' })"
+  },
+  {
+    name: "peake_ui",
+    js: `${CDN_BASE}/peake_ui.js`,
+    json: `${CDN_BASE}/peake_ui.json`,
+    description: "UI toolkit for animation, theme toggles, and faster page setup.",
+    usage: "PeakeUI.init({ backgroundEffects: true })"
   },
   {
     name: "fetch_market",
