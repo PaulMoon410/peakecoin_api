@@ -56,6 +56,13 @@
     "usage": "getCryptoRssSources()"
   },
   {
+    "name": "rss_feed_helper",
+    "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/rss_feed_helper.js",
+    "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/rss_feed_helper.json",
+    "description": "Resilient RSS feed loader with multi-URL fallback (including CNS Maryland alternates).",
+    "usage": "RssFeedHelper.fetchSourceById('cnsmaryland', { limit: 5 })"
+  },
+  {
     "name": "peake_ui",
     "js": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/peake_ui.js",
     "json": "https://cdn.jsdelivr.net/gh/PaulMoon410/peakecoin_api/peake_ui.json",

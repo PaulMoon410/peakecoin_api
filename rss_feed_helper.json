@@ -1,0 +1,46 @@
+{
+  "name": "rss_feed_helper",
+  "updated_at": "2026-03-30T00:00:00Z",
+  "description": "Resilient RSS helper source presets for PeakeCoin websites.",
+  "sources": {
+    "localapi": {
+      "type": "local-api",
+      "name": "PeakeCoin Local API",
+      "link": "https://github.com/PaulMoon410/peakecoin_api"
+    },
+    "marylandmatters": {
+      "urls": ["https://www.marylandmatters.org/feed/"],
+      "name": "Maryland Matters",
+      "link": "https://www.marylandmatters.org"
+    },
+    "marylandreporter": {
+      "urls": ["https://marylandreporter.com/feed/"],
+      "name": "Maryland Reporter",
+      "link": "https://marylandreporter.com"
+    },
+    "cnsmaryland": {
+      "urls": [
+        "https://cnsmaryland.org/feed/",
+        "https://cnsmaryland.org/category/maryland/feed/",
+        "https://cnsmaryland.org/category/news/feed/"
+      ],
+      "name": "CNS Maryland",
+      "link": "https://cnsmaryland.org"
+    },
+    "cointelegraph": {
+      "urls": ["https://cointelegraph.com/rss"],
+      "name": "Cointelegraph",
+      "link": "https://cointelegraph.com"
+    },
+    "coindesk": {
+      "urls": ["https://www.coindesk.com/arc/outboundfeeds/rss/"],
+      "name": "CoinDesk",
+      "link": "https://www.coindesk.com"
+    },
+    "decrypt": {
+      "urls": ["https://decrypt.co/feed"],
+      "name": "Decrypt",
+      "link": "https://decrypt.co"
+    }
+  }
+}

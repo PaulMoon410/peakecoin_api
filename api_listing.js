@@ -61,6 +61,13 @@ const apiModules = [
     usage: "getCryptoRssSources()"
   },
   {
+    name: "rss_feed_helper",
+    js: `${CDN_BASE}/rss_feed_helper.js`,
+    json: `${CDN_BASE}/rss_feed_helper.json`,
+    description: "Resilient RSS feed loader with multi-URL fallback (including CNS Maryland alternates).",
+    usage: "RssFeedHelper.fetchSourceById('cnsmaryland', { limit: 5 })"
+  },
+  {
     name: "peake_ui",
     js: `${CDN_BASE}/peake_ui.js`,
     json: `${CDN_BASE}/peake_ui.json`,
