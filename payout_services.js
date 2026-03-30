@@ -67,6 +67,45 @@ const payoutServices = {
       description: "Tracks payout requests pending approval or operational review before sending.",
       source_files: ["pending_withdrawals.json"],
       fields: ["withdrawal_id", "user", "token", "amount", "status", "requested"]
+    },
+    {
+      id: "paypal_payout",
+      name: "PayPal Payout",
+      type: "offchain",
+      network: "PayPal",
+      status: "available",
+      token_support: ["USD"],
+      flow: "manual-or-api",
+      description: "Off-chain payout option using PayPal email, PayPal.Me, or business payout APIs.",
+      source_files: ["payout_services.js", "payout_services.json"],
+      fields: ["recipient", "amount", "currency", "note", "paypal_email", "paypal_handle"],
+      link_template: "https://www.paypal.com/paypalme/{handle}/{amount}"
+    },
+    {
+      id: "cashapp_payout",
+      name: "Cash App Payout",
+      type: "offchain",
+      network: "Cash App",
+      status: "available",
+      token_support: ["USD", "BTC"],
+      flow: "manual",
+      description: "Off-chain payout option using Cash App cashtags or direct Cash App settlement.",
+      source_files: ["payout_services.js", "payout_services.json"],
+      fields: ["recipient", "amount", "currency", "note", "cashtag"],
+      link_template: "https://cash.app/${handle}"
+    },
+    {
+      id: "venmo_payout",
+      name: "Venmo Payout",
+      type: "offchain",
+      network: "Venmo",
+      status: "available",
+      token_support: ["USD"],
+      flow: "manual-or-deeplink",
+      description: "Off-chain payout option using Venmo usernames or mobile deeplink handoff.",
+      source_files: ["payout_services.js", "payout_services.json"],
+      fields: ["recipient", "amount", "currency", "note", "venmo_handle"],
+      link_template: "venmo://paycharge?txn=pay&recipients={handle}&amount={amount}&note={note}"
     }
   ]
 };
@@ -106,11 +145,32 @@ function buildPayoutRequest(serviceId, payload = {}) {
   return request;
 }
 
+function buildExternalPayoutLink(serviceId, payload = {}) {
+  const service = getPayoutServiceById(serviceId);
+  if (!service) {
+    throw new Error(`Unknown payout service: ${serviceId}`);
+  }
+
+  const handle = encodeURIComponent(payload.handle || payload.paypal_handle || payload.cashtag || payload.venmo_handle || '');
+  const amount = encodeURIComponent(payload.amount ?? '');
+  const note = encodeURIComponent(payload.note || payload.memo || 'PeakeCoin payout');
+
+  if (!service.link_template) {
+    return '';
+  }
+
+  return service.link_template
+    .replace('{handle}', handle)
+    .replace('{amount}', amount)
+    .replace('{note}', note);
+}
+
 const payoutServiceHelpers = {
   getPayoutServices,
   getPayoutServiceById,
   getPayoutServicesByNetwork,
-  buildPayoutRequest
+  buildPayoutRequest,
+  buildExternalPayoutLink
 };
 
 if (typeof module !== 'undefined') {
@@ -120,6 +180,7 @@ if (typeof module !== 'undefined') {
     getPayoutServiceById,
     getPayoutServicesByNetwork,
     buildPayoutRequest,
+    buildExternalPayoutLink,
     payoutServiceHelpers
   };
 }
@@ -130,5 +191,6 @@ if (typeof window !== 'undefined') {
   window.getPayoutServiceById = getPayoutServiceById;
   window.getPayoutServicesByNetwork = getPayoutServicesByNetwork;
   window.buildPayoutRequest = buildPayoutRequest;
+  window.buildExternalPayoutLink = buildExternalPayoutLink;
   window.payoutServiceHelpers = payoutServiceHelpers;
 }

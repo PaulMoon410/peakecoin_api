@@ -64,6 +64,45 @@
       "description": "Tracks payout requests pending approval or operational review before sending.",
       "source_files": ["pending_withdrawals.json"],
       "fields": ["withdrawal_id", "user", "token", "amount", "status", "requested"]
+    },
+    {
+      "id": "paypal_payout",
+      "name": "PayPal Payout",
+      "type": "offchain",
+      "network": "PayPal",
+      "status": "available",
+      "token_support": ["USD"],
+      "flow": "manual-or-api",
+      "description": "Off-chain payout option using PayPal email, PayPal.Me, or business payout APIs.",
+      "source_files": ["payout_services.js", "payout_services.json"],
+      "fields": ["recipient", "amount", "currency", "note", "paypal_email", "paypal_handle"],
+      "link_template": "https://www.paypal.com/paypalme/{handle}/{amount}"
+    },
+    {
+      "id": "cashapp_payout",
+      "name": "Cash App Payout",
+      "type": "offchain",
+      "network": "Cash App",
+      "status": "available",
+      "token_support": ["USD", "BTC"],
+      "flow": "manual",
+      "description": "Off-chain payout option using Cash App cashtags or direct Cash App settlement.",
+      "source_files": ["payout_services.js", "payout_services.json"],
+      "fields": ["recipient", "amount", "currency", "note", "cashtag"],
+      "link_template": "https://cash.app/${handle}"
+    },
+    {
+      "id": "venmo_payout",
+      "name": "Venmo Payout",
+      "type": "offchain",
+      "network": "Venmo",
+      "status": "available",
+      "token_support": ["USD"],
+      "flow": "manual-or-deeplink",
+      "description": "Off-chain payout option using Venmo usernames or mobile deeplink handoff.",
+      "source_files": ["payout_services.js", "payout_services.json"],
+      "fields": ["recipient", "amount", "currency", "note", "venmo_handle"],
+      "link_template": "venmo://paycharge?txn=pay&recipients={handle}&amount={amount}&note={note}"
     }
   ]
 }
